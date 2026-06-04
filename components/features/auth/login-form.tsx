@@ -20,8 +20,8 @@ export function LoginForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
-  const [email, setEmail] = useState("mail@sebastian-sonne.com");
-  const [password, setPassword] = useState("123456");
+  const [email, setEmail] = useState(process.env.NEXT_PUBLIC_DEV_EMAIL || "");
+  const [password, setPassword] = useState(process.env.NEXT_PUBLIC_DEV_PASSWORD || "");
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -50,7 +50,6 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          
           <CardTitle className="text-2xl">Login</CardTitle>
           <CardDescription>
             Enter your email below to login to your account
