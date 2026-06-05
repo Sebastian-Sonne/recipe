@@ -34,12 +34,14 @@ export function SignUpForm({
     setIsLoading(true);
     setError(null);
 
+    console.log(`${window.location.origin}/app`)
+
     try {
       const { error } = await supabase.auth.signUp({
         email,
         password,
         options: {
-          emailRedirectTo: `${window.location.origin}/app`,
+          emailRedirectTo: `${window.location.origin}/app`, //TODO Welcome Screen?
         },
       });
       if (error) throw error;
