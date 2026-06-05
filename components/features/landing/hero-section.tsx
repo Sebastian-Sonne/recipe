@@ -43,15 +43,13 @@ export function HeroSection() {
             asChild
             className="h-12 px-6 text-base font-medium w-full sm:w-auto"
           >
-            <Link href={"/demo"}>
-            View Live Demo
-            </Link>
+            <Link href={"/demo"}>View Live Demo</Link>
           </Button>
         </div>
-
+        {/* 
         <div className="mt-16 border rounded-xl shadow-2xl bg-muted/30 p-4 max-w-5xl mx-auto backdrop-blur-sm">
           <div className="aspect-video w-full rounded-lg bg-muted border flex items-center justify-center text-muted-foreground">
-            {/* TODO replace */}
+           
             <img
               src={"/hero.jpg"}
               alt={"Dashboard Image Preview"}
@@ -60,6 +58,7 @@ export function HeroSection() {
             />
           </div>
         </div>
+        */}
       </div>
     </section>
   );

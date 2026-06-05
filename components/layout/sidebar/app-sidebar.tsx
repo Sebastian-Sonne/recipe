@@ -4,13 +4,12 @@ import * as React from "react";
 import {
   BookOpen,
   Bot,
-  Command,
+  ChefHat,
   Frame,
   LifeBuoy,
   Map,
   PieChart,
-  Send,
-  Settings2,
+  Settings,
   SquareTerminal,
 } from "lucide-react";
 
@@ -27,6 +26,7 @@ import { NavMain } from "./nav-main";
 import { NavProjects } from "./nav-projects";
 import { NavSecondary } from "./nav-secondary";
 import { NavUser } from "./nav-user";
+import Link from "next/link";
 
 const data = {
   user: {
@@ -97,40 +97,17 @@ const data = {
         },
       ],
     },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
-    },
   ],
   navSecondary: [
     {
       title: "Support",
-      url: "#",
+      url: "/app/support",
       icon: LifeBuoy,
     },
     {
-      title: "Feedback",
-      url: "#",
-      icon: Send,
+      title: "Settings",
+      url: "/app/settings",
+      icon: Settings,
     },
   ],
   projects: [
@@ -159,15 +136,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <a href="#">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-4" />
+              <Link href={"/app"}>
+                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-background text-sidebar-primary-foreground">
+                  <ChefHat className="size-4" />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-medium">Acme Inc</span>
-                  <span className="truncate text-xs">Enterprise</span>
+                  <span className="truncate font-medium">RecipeHub</span>
+                  <span className="truncate text-xs">Personal</span>
                 </div>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

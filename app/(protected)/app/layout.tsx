@@ -15,9 +15,9 @@ export default function Page({
   return (
     <SidebarProvider>
       <AppSidebar />
-      <SidebarInset className="bg-yellow-400 border-4 border-blue-700">
+      <SidebarInset className="px-4">
         <header className="flex h-16 shrink-0 items-center gap-2">
-          <div className="flex items-center gap-2 px-4">
+          <div className="flex items-center gap-2">
             <SidebarTrigger className="-ml-1" />
             <Separator
               orientation="vertical"

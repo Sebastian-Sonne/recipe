@@ -67,7 +67,7 @@ export default function RecipeDashboard() {
   ];
 
   return (
-    <div className="">
+    <div className="flex flex-col gap-8 mt-4">
       {/* Header Section */}
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
